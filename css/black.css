@@ -4,10 +4,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  height: 100vh;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   background: #1E2B34;
@@ -23,6 +20,10 @@ body {
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-font-smoothing: subpixel-antialiased;
 	}
+}
+
+.trn {
+  /* trn is a marker that the content needs translated; used by main-unminified.js */
 }
 
 button:focus {
@@ -65,25 +66,62 @@ a.navbar-brand {
   height: 100%;
 }
 
-.container {
-  margin: 0;
-  padding: 0;
-  display:table;
-  width: 100%;
-  margin-top: -20px;
-  box-sizing: border-box;
-  font-size: 90%;
+.widget-row > .widget-box {
+  /* 
+    .navbar is 50px; so we take 25px off of each of our two widget-row's
+   */
+  --navBar: 25px;
+  height: calc(50vh - var(--navBar));
+  overflow-y: hidden
 }
+
+/* remove gutter */
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.navbar {
+  margin-bottom: 0 !important;
+}
+/* /remove gutter */
+
+/*
+  The last div in the widget box needs to be scrollable; in order to do that we must set the height.
+  All widget-boxes have a .row-header so we need to subtract that from the height
+  If the widget-box has a nav-header (35px) we need to subtract that from the height too:
+*/
+.widget-box > div.row-header + div:last-child {
+  --navBar: 25px;
+  --rowHeader: 38px;
+  --navHeader: 0;
+  height: calc(50vh - (var(--navBar) + var(--rowHeader) + var(--navHeader)));
+  overflow-y: auto;
+}
+.widget-box > div.nav-header + div:last-child {
+  --navBar: 25px;
+  --rowHeader: 38px;
+  --navHeader: 35px;
+  height: calc(50vh - (var(--navBar) + var(--rowHeader) + var(--navHeader)));
+  overflow-y: auto;
+}
+
+#updates-box > #updates {
+  /* This makes the twitter widget scroll */
+  height: 100%;
+} 
 
 .center {
   text-align: center;
-}
-
-.row {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  display: table-row;
 }
 
 .row-container {
