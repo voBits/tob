@@ -118,7 +118,16 @@ a.navbar-brand {
 #updates-box > #updates {
   /* This makes the twitter widget scroll */
   height: 100%;
-} 
+}
+
+#balance > div:first-child {
+  /* The react balance widget wraps everything in a single div without any ID or class and it ends up scrolling ever-so-slightly in most cases without this */
+  overflow-x: hidden;
+}
+
+.widget-box .tab-content {
+  padding: 15px;
+}
 
 .center {
   text-align: center;
@@ -552,6 +561,11 @@ fieldset[disabled] .form-control {
   font-size: 12px;
   font-weight: bold;
   color: hsla(0,0%,100%,.8);
+}
+
+.form-horizontal > .form-group [class*='col-'] {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 #transferFormToken td,
