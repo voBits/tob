@@ -88,6 +88,7 @@ a.navbar-brand {
 
 .container-fluid {
   padding: 0;
+  font-size: 90%;
 }
 
 .navbar {
@@ -123,6 +124,12 @@ a.navbar-brand {
 #balance > div:first-child {
   /* The react balance widget wraps everything in a single div without any ID or class and it ends up scrolling ever-so-slightly in most cases without this */
   overflow-x: hidden;
+}
+
+#balance .tab-content {
+  /*#balance has .padding-sides on it's contents so this isn't needed */
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .widget-box .tab-content {
