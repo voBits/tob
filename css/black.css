@@ -125,8 +125,20 @@ a.navbar-brand {
   overflow-x: hidden;
 }
 
+#balance > div > div:nth-child(2) > div {
+  /* To see why we do this check screen widths between 768px-992px (bootstrap's responsive breakpoints).
+   In essence the Balance needs a min width just before bootstrap's breakpoint kicks in and gives it the whole screen width
+   */
+  overflow-x: auto;
+}
+
+#balance .tab-content .table-balances {
+  /* We need overflow-x:auto on Balances to keep it from getting clipped. However, the table is ever-so slightly too wide for the bootstrap md-3 column without it in chrome AND overflow-x:auto (it fits with overflow-x:hidden */
+  width: 305px;
+}
+
 #balance .tab-content {
-  /*#balance has .padding-sides on it's contents so this isn't needed */
+  /* #balance has .padding-sides on it's contents so this (from .widget-box .tab-content) isn't needed */
   padding-left: 0px;
   padding-right: 0px;
 }
@@ -290,11 +302,6 @@ a:hover {
 .padding {
   padding-top: 12px;
   padding-bottom: 5px;
-  padding-left: 12px;
-  padding-right: 12px;
-}
-
-.padding-sides {
   padding-left: 12px;
   padding-right: 12px;
 }
