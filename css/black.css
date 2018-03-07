@@ -541,12 +541,27 @@ fieldset[disabled] .form-control {
   font-size: 12px;
   font-weight: bold;
   line-height: 30px;
+  /* Height matches inputs such as .form-control */
+  height: 36px; 
+  /*
+  This padding makes the New Order Buy/Sell and modal Buy/Sell buttons same height and text vertical alignment as the
+   Deposit/Withdraw buttons in the balance box. Technically the .btn-success & .btn-danger buttons (New Order Buy/Sell
+   buttons) and the modal dialog buttons are missing the .btn-xs styles that the Deposit buttons have but changing
+   styles here is seems safer than mucking with that JavaScript.
+  */
+  padding: 1px 5px;  
   text-align: center;
   cursor: pointer;
   color: #fff;
   user-select: none;
   background-color: #3d84d6 !important;
-  transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out; 
+}
+
+.modal-footer .btn {
+  /* Buy button in footer of dialogs needs some breathing room or it looks squished */
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .btn:hover,
@@ -555,18 +570,7 @@ fieldset[disabled] .form-control {
 }
 
 .btn-success {
-  flex: 1;
-  border: none;
-  border-radius: 1px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 30px;
-  text-align: center;
-  cursor: pointer;
-  color: #fff;
-  user-select: none;
   background-color: #4da53c !important;
-  transition: background-color .2s ease-in-out;
 }
 
 .btn-success:hover {
@@ -574,32 +578,11 @@ fieldset[disabled] .form-control {
 }
 
 .btn-danger {
-  flex: 1;
-  border: none;
-  border-radius: 1px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 30px;
-  text-align: center;
-  cursor: pointer;
-  color: #fff;
-  user-select: none;
   background-color: #ff6939 !important;
-  transition: background-color .2s ease-in-out;
 }
 
 .btn-danger:hover {
-  flex: 1;
-  border-radius: 1px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 30px;
-  text-align: center;
-  cursor: pointer;
-  color: #fff;
-  user-select: none;
   background-color: #ff5620 !important;
-  transition: background-color .2s ease-in-out;
 }
 
 #myTrades tbody tr:nth-child(even),
