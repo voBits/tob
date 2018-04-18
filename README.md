@@ -1,7 +1,7 @@
 # Gittex
 [![Chat on Discord](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/a8K8n)
-[![Join us on Reddit](https://img.shields.io/badge/reddit-Gittex-red.svg)](https://www.reddit.com/r/Gittex/)
-[![Built with Framework.js](https://img.shields.io/badge/built%20in-Framework.js%20(r1)-00A185.svg](https://plasnerd.github.io/Framework.js/)
+[![Join us on Reddit](https://img.shields.io/badge/reddit-Gittex-red.svg)](https://www.reddit.com/r/Gittex)
+[![Built with Framework.js](<img src="https://img.shields.io/badge/built%20in-Framework.js%20(r1)-00A185.svg"/>](https://plasnerd.github.io/Framework.js)
 
 Gittex is a decentralized Ethereum Token Exchange with the most ERC20 listings of any exchange.
 
