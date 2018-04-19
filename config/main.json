@@ -993,7 +993,6 @@
     { "addr": "0xff603f43946a3a28df5e6a73172555d8c8b02386", "name": "RNT", "decimals": 18 },
     { "addr": "0xffc63b9146967a1ba33066fb057ee3722221acf0", "name": "A", "decimals": 18 },
     { "addr": "0xffe8196bc259e8dedc544d935786aa4709ec3e64", "name": "HDG", "decimals": 18 },
-    { "addr": "0x9e3319636e2126e3c0bc9e3134aec5e1508a46c7", "name": "UTNP", "decimals": 18 },
     { "addr": "0xaaaebe6fe48e54f431b0c390cfaf0b017d09d42d", "name": "CEL", "decimals": 4 }
   ],
   "defaultPair": { "token": "DAI", "base": "ETH" }
