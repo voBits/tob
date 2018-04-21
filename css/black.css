@@ -4,10 +4,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  height: 100vh;
   font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   background: #1E2B34;
@@ -15,7 +12,6 @@ body {
 }
 
 body {
-  padding-top: 50px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -24,6 +20,10 @@ body {
 		-moz-osx-font-smoothing: grayscale;
 		-webkit-font-smoothing: subpixel-antialiased;
 	}
+}
+
+.trn {
+  /* trn is a marker that the content needs translated; used by main-unminified.js */
 }
 
 button:focus {
@@ -59,46 +59,96 @@ body::-webkit-scrollbar-thumb:hover,
   border-radius: 0;
 }
 a.navbar-brand {
-  height: 50px;
   padding: 0;
 }
 .navbar-brand img {
   height: 100%;
 }
 
-.container {
-  margin: 0;
+.widget-row > .widget-box {
+  /* 
+    .navbar is 50px; so we take 25px off of each of our two widget-row's
+   */
+  --navBar: 25px;
+  height: calc(50vh - var(--navBar));
+  overflow-y: hidden
+}
+
+/* remove gutter */
+.row.no-gutter {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.row.no-gutter [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.row [class*='col-']:not(:last-child) {
+  border-right: 2px solid #18252E;
+}
+
+.container-fluid {
   padding: 0;
-  display:table;
-  width: 100%;
-  box-sizing: border-box;
   font-size: 90%;
 }
 
-.center {
-  text-align: center;
+.navbar {
+  margin-bottom: 0 !important;
+}
+/* /remove gutter */
+
+/*
+  The last div in the widget box needs to be scrollable; in order to do that we must set the height.
+  All widget-boxes have a .row-header so we need to subtract that from the height
+  If the widget-box has a nav-header (35px) we need to subtract that from the height too:
+*/
+.widget-box > div.row-header + div:last-child {
+  --navBar: 25px;
+  --rowHeader: 38px;
+  --navHeader: 0;
+  height: calc(50vh - (var(--navBar) + var(--rowHeader) + var(--navHeader)));
+  overflow-y: auto;
+}
+.widget-box > div.nav-header + div:last-child {
+  --navBar: 25px;
+  --rowHeader: 38px;
+  --navHeader: 35px;
+  height: calc(50vh - (var(--navBar) + var(--rowHeader) + var(--navHeader)));
+  overflow-y: auto;
 }
 
-.row {
-  margin: 0;
-  padding: 0;
+#updates-box > #updates {
+  /* This makes the twitter widget scroll */
   height: 100%;
-  display: table-row;
 }
 
-.row-container {
-  width: 100%;
-  height: 100%;
+#balance > div:first-child {
+  /* The react balance widget wraps everything in a single div without any ID or class and it ends up scrolling ever-so-slightly in most cases without this */
+  overflow-x: hidden;
 }
 
-.row .no-float {
-  margin: 0;
-  padding: 0;
-  display: table-cell;
-  float: none;
+#balance > div > div:nth-child(2) > div {
+  /* To see why we do this check screen widths between 768px-992px (bootstrap's responsive breakpoints).
+   In essence the Balance needs a min width just before bootstrap's breakpoint kicks in and gives it the whole screen width
+   */
+  overflow-x: auto;
 }
-.row .no-float:not(:last-child) {
-	border-right: 2px solid #18252E;
+
+#balance .tab-content .table-balances {
+  /* We need overflow-x:auto on Balances to keep it from getting clipped. However, the table is ever-so slightly too wide for the bootstrap md-3 column without it in chrome AND overflow-x:auto (it fits with overflow-x:hidden */
+  width: 305px;
+}
+
+#balance .tab-content {
+  /* #balance has .padding-sides on it's contents so this (from .widget-box .tab-content) isn't needed */
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.widget-box .tab-content {
+  padding: 15px;
 }
 
 .row-header {
@@ -253,59 +303,11 @@ a:hover {
   text-decoration: none;
 }
 
-.align-right {
-  text-align: right !important;
-}
-
 .padding {
   padding-top: 12px;
   padding-bottom: 5px;
   padding-left: 12px;
   padding-right: 12px;
-}
-
-.padding-sides {
-  padding-left: 12px;
-  padding-right: 12px;
-}
-
-.padding-right {
-  padding-right: 12px !important;
-}
-
-.clear {
-  clear: both;
-}
-
-.token-container {
-  width: 880px;
-  margin: 0 auto;
-}
-.token {
-  float: left;
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-  font-size: 36px;
-  border: 5px solid #ccc;
-  text-align: center;
-  line-height: 180px;
-  font-weight: bold;
-  border-radius: 200px;
-}
-.token:hover {
-  background: #036;
-  color: #fff;
-  cursor: pointer;
-}
-
-.static-container {
-  padding-top: 20px;
-  background: #fff;
-  padding: 20px;
-  border: 10px solid #ccc;
-  height: calc(100vh - 50px);
-  overflow-y: auto;
 }
 
 .modal-dialog.large {
@@ -520,6 +522,11 @@ fieldset[disabled] .form-control {
   color: hsla(0,0%,100%,.8);
 }
 
+.form-horizontal > .form-group [class*='col-'] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 #transferFormToken td,
 #transferFormBase td {
   position: relative;
@@ -545,12 +552,27 @@ fieldset[disabled] .form-control {
   font-size: 12px;
   font-weight: bold;
   line-height: 30px;
+  /* Height matches inputs such as .form-control */
+  height: 36px; 
+  /*
+  This padding makes the New Order Buy/Sell and modal Buy/Sell buttons same height and text vertical alignment as the
+   Deposit/Withdraw buttons in the balance box. Technically the .btn-success & .btn-danger buttons (New Order Buy/Sell
+   buttons) and the modal dialog buttons are missing the .btn-xs styles that the Deposit buttons have but changing
+   styles here is seems safer than mucking with that JavaScript.
+  */
+  padding: 1px 5px;  
   text-align: center;
   cursor: pointer;
   color: #fff;
   user-select: none;
   background-color: #3d84d6 !important;
-  transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out; 
+}
+
+.modal-footer .btn {
+  /* Buy button in footer of dialogs needs some breathing room or it looks squished */
+  padding-left: 12px;
+  padding-right: 12px;
 }
 
 .btn:hover,
@@ -559,18 +581,7 @@ fieldset[disabled] .form-control {
 }
 
 .btn-success {
-  flex: 1;
-  border: none;
-  border-radius: 1px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 30px;
-  text-align: center;
-  cursor: pointer;
-  color: #fff;
-  user-select: none;
   background-color: #4da53c !important;
-  transition: background-color .2s ease-in-out;
 }
 
 .btn-success:hover {
@@ -578,32 +589,11 @@ fieldset[disabled] .form-control {
 }
 
 .btn-danger {
-  flex: 1;
-  border: none;
-  border-radius: 1px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 30px;
-  text-align: center;
-  cursor: pointer;
-  color: #fff;
-  user-select: none;
   background-color: #ff6939 !important;
-  transition: background-color .2s ease-in-out;
 }
 
 .btn-danger:hover {
-  flex: 1;
-  border-radius: 1px;
-  font-size: 12px;
-  font-weight: bold;
-  line-height: 30px;
-  text-align: center;
-  cursor: pointer;
-  color: #fff;
-  user-select: none;
   background-color: #ff5620 !important;
-  transition: background-color .2s ease-in-out;
 }
 
 #myTrades tbody tr:nth-child(even),
