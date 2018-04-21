@@ -24,5 +24,5 @@ Gittex currently interfaces with EtherDelta's original smart contract which allo
 As this is a project by the community, for the community, transactions to and from the donations address will be public and can be viewed on the blockchain. We will also keep a public ledger of how the donations are distributed. That way, donors can see exactly how their donations are helping!
 
 
-+# What is the Roadmap for Gittex?
+# What is the Roadmap for Gittex?
 +The Gittex Roadmap is maintained at https://Gittex.github.io/about/
