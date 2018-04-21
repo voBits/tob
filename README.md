@@ -25,4 +25,4 @@ As this is a project by the community, for the community, transactions to and fr
 
 
 # What is the Roadmap for Gittex?
-+The Gittex Roadmap is maintained at https://Gittex.github.io/about/
+The Gittex Roadmap is maintained at https://gittex.github.io/about/
