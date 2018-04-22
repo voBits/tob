@@ -1,4 +1,6 @@
 # <img src="https://gittex.github.io/images/title.png"/>
+Decentralized Ethereum Token Exchange backed in GitHub
+
 [![Chat on Discord](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/a8K8n)
 [![Join us on Reddit](https://img.shields.io/badge/reddit-Gittex-red.svg)](https://www.reddit.com/r/Gittex)
 <a href="https://plasnerd.github.io/PEHTML/" target="blank"><img src="https://img.shields.io/badge/built%20with-PEHTML%20(v2)-295596.svg"></a>
