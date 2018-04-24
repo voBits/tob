@@ -2,7 +2,8 @@
 Ethereum Token Decentralized exchange community.
 
 [![Follow us on Twitter](https://img.shields.io/badge/follow-Twitter-blue.svg)](https://twitter.com/voBitsOfficial)
-https://travis-ci.org/voBits/vobits.github.io.svg?branch=master
+[![Build Status](https://travis-ci.org/voBits/vobits.github.io.svg?branch=master)](https://travis-ci.org/voBits/vobits.github.io)
+
 
 
 <a href="https://plasnerd.github.io/PEHTML/" target="blank"><img src="https://img.shields.io/badge/built%20with-PEHTML%20(v2)-295596.svg"></a>
