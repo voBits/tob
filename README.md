@@ -1,9 +1,8 @@
 # <img src="https://vobits.github.io/images/title.png"/>
 Ethereum Token Decentralized exchange community.
 
-[![Follow us on Twitter](https://img.shields.io/badge/follow-Twitter-blue.svg)](https://twitter.com/GittexOfficial)
-[![Chat on Discord](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/a8K8n)
-[![Join us on Reddit](https://img.shields.io/badge/reddit-Gittex-red.svg)](https://www.reddit.com/r/Gittex)
+[![Follow us on Twitter](https://img.shields.io/badge/follow-Twitter-blue.svg)](https://twitter.com/voBitsOfficial)
+
 
 <a href="https://plasnerd.github.io/PEHTML/" target="blank"><img src="https://img.shields.io/badge/built%20with-PEHTML%20(v2)-295596.svg"></a>
 <a href="https://plasnerd.github.io/Framework.js/" target="blank"><img src="https://img.shields.io/badge/built%20in-Framework.js%20(r1)-00A185.svg"></a>
@@ -26,5 +25,5 @@ We welcome contributions from the community since its powered by the ethereum to
 voBits currently interfaces with EtherDelta's original smart contract which allows voBits users to trade utilizing its volume. However, this means that the trading fees still goes back to them while developmental costs comes entirely out of voBits pockets. 
  
 
-# What is the Roadmap for Gittex?
+# What is the Roadmap for voBits?
 The voBits Roadmap is maintained at https://vobits.github.io/about/
