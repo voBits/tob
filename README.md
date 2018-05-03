@@ -19,7 +19,8 @@ The purpose of voBits is to have a community driven token ecosystem that is self
 
 
 # How does voBits Work?
-voBits currently interfaces with EtherDelta's original smart contract (described in more detail [here](https://www.reddit.com/r/EtherDelta/comments/6kdiyl/smart_contract_overview/)) which allows voBits users to trade utilizing its volume. But soon we will migrate to our own smart contract.
+voBits currently interfaces with EtherDelta's original smart contract (described in more detail [here](https://www.reddit.com/r/EtherDelta/comments/6kdiyl/smart_contract_overview/)) which allows voBits users to trade utilizing its volume. But soon we will migrate to our own  voBitsExchange wallet smart contract which will  have more function and ability to purchase ether directly while on the decentralized trading platform using integrated payment gateway for transaction.
+.
 
 
 # Contribute
