@@ -40,6 +40,7 @@
     { "addr": "0x01afc37f4f85babc47c0e2d0eababc7fb49793c8", "name": "GNTM", "decimals": 18 },
     { "addr": "0x01c67791309c71aa4ed373025a0c089696d7c9e4", "name": "CCB", "decimals": 18 },
     { "addr": "0x0200412995f1bafef0d3f97c4e28ac2515ec1ece", "name": "FLLW", "decimals": 18 },
+    { "addr": "0xc7d150214856f42fb6d4111f7c88fb4456313b8a", "name": "VBS", "decimals": 18 },
     { "addr": "0x0235fe624e044a05eed7a43e16e3083bc8a4287a", "name": "OCC", "decimals": 18 },
     { "addr": "0x025abad9e518516fdaafbdcdb9701b37fb7ef0fa", "name": "GTKT", "decimals": 0 },
     { "addr": "0x02b9806a64cb05f02aa8dcc1c178b88159a61304", "name": "DEL", "decimals": 18 },
