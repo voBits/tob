@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "RyxExClient": {
+      "commandName": "Project",
+      "commandLineArgs": "maker"
+    },
+    "RyxExClient - Maker": {
+      "commandName": "Project",
+      "commandLineArgs": "maker -v"
+    },
+    "RyxExClient - Taker": {
+      "commandName": "Project",
+      "commandLineArgs": "taker -v"
+    }
+  }
+}
