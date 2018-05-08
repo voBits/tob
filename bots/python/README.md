@@ -1,4 +1,4 @@
-RyxEx Decentralized Cryptocurrency Exchange API Client Service for python3 using WebSockets
+Decentralized Cryptocurrency Exchange API Client Service for python3 using WebSockets
 ================================================================================================
 
 This service will connect to RyxEx's WebSocket API,
