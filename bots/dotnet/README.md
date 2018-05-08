@@ -1,4 +1,4 @@
-# RyxEx .Net bot #
+#  .Net bot #
 
 ## Install NuGet dependencies ##
 
