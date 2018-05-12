@@ -13,9 +13,10 @@ voBits is an Ethereum Token Decentralized exchange community with ERC20/233 supp
 
 
 # What is voBits?
-voBits currently acts as an updated (new features), open source and updated interface for EtherDelta's smart contract with an active and public development. Although voBits is a decendant of  EtherDelta (ForkDelta), considerable development time has been put towards it.
+voBits is an Ethereum Token Decentralized exchange community with ERC20/233 support, and including new tokens from airdrops/bounties/ICOs with liquidity support from its community via mining.
 
-The purpose of voBits is to have a community driven token ecosystem that is self funded by its community, upholding the dreams of its founders and be a community home to all ETHEREUM BASED TOKEN  that have potential with potentails to add value to the human race. It is agaisnt scam since it is backed in GitHub (no domain spoofing like occured in EtherDelta).
+
+The purpose of voBits is to have a community driven token ecosystem that is self funded by its community, upholding the dreams of its founders and be a community home to all ETHEREUM BASED TOKEN that have potential with potentails to add value to the human race. It is agaisnt scam since because it is backed in GitHub (no domain spoofing).
 
 
 # How does voBits Work?
