@@ -1,7 +1,7 @@
 const Service = require('./service.js');
 
 const token = {
-  addr: '0x86fa049857e0209aa7d9e616f7eb3b3b78ecfdb0',
+  addr: '0xc7d150214856f42fb6d4111f7c88fb4456313b8a',
   decimals: 18,
 };
 
