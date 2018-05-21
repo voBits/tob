@@ -16,7 +16,7 @@ voBits is an Ethereum Token Decentralized exchange community with ERC20/233 supp
 voBits is an Ethereum Token Decentralized exchange community with ERC20/233 support, and including new tokens from airdrops/bounties/ICOs with liquidity support from its community via mining.
 
 
-The purpose of voBits is to have a community driven token ecosystem that is self funded by its community, upholding the dreams of its founders and be a community home to all ETHEREUM BASED TOKEN that have potential with potentails to add value to the human race. It is agaisnt scam since because it is backed in GitHub (no domain spoofing).
+The purpose of voBits is to have a community driven token ecosystem that is self funded by its community, upholding the dreams of its founders and be a community home to all ETHEREUM BASED TOKEN that have potential with potentials to add value to the human race. It is against scam since because it is backed in GitHub (no domain spoofing).
 
 
 # How does voBits Work?
