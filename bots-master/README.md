@@ -1,4 +1,4 @@
-# EtherDelta bot sample code
+# voBits bots-master sample code
 
 For API documentation, see https://github.com/etherdelta/etherdelta.github.io/tree/master/docs.
 
